@@ -1,14 +1,19 @@
-h1 {
-  text-align: right;
-  width: 50%;
-  margin: 0 auto;
+.table {
+  border: white;
+  background: white;
+  border-collapse: collapse;
+  border: 2px solid white;
 }
 
-table {
-  width: 50%;
-  margin: 0 auto;
+td {
+  padding: 3px;
+  border: maroon;
 }
 
-th {
-  text-align: left;
+.styleTD {
+  border: 1px solid gray;
+}
+
+.button {
+  margin: 5px;
 }

@@ -1,24 +1,67 @@
-<h1>Welcome to app</h1>
-<div *ngIf="!!products.length">
-  <table>
-    <tr>
-      <th>Название товара</th>
-      <th>Количество товара</th>
-      <th>Цена</th>
-      <th>Сумма</th>
-      <th colspan="2">Добавить товар</th>
-    </tr>
-    <tr *ngFor="let product of products">
-      <td>{{product.name}}</td>
-      <td><input type="number" min="0" [value]="product.count"></td>
-      <td>{{product.price}}</td>
-      <td>{{product.sum}}</td>
-      <td>
-        <button (click)="addProduct(product.id)" >Добавить</button>
-      </td>
-      <td>
-        <button (click)="delProduct(product.id)">Удалить</button>
-      </td>
-    </tr>
-  </table>
-</div>
+{{ title }} app is running!
+<br>
+<br>
+<table class="table">
+  <tbody>
+  <tr>
+    <th> Название товара</th>
+    <th> Количество товара</th>
+    <th> Цена</th>
+    <th> Сумма</th>
+    <th> Добавить товар</th>
+  </tr>
+
+  <tr *ngFor="let item of NewTovar">
+    <td><s><i>{{ item.NameTovar }}</i></s></td>
+    <td class="styleTD">{{ item.Count }}</td>
+    <td>{{ item.Price }}</td>
+    <td>{{ item.Summa }}</td>
+    <td>
+      <button (click)="increase(item)">Добавить</button>
+      <button (click)="delete(item)">Delete</button>
+    </td>
+  </tr>
+
+  <!-- <tr>
+    <td><i>Товар2</i></td>
+    <td class="styleTD">{{ count2 }}</td>
+    <td>{{ price2 }}</td>
+    <td>{{ sum2 }}</td>
+    <td> <button (click)="increase2()">Добавить</button>
+  <button (click)="del2()">Delete</button> </td>
+  </tr>
+
+  <tr>
+    <td><s><i>Товар3</i></s></td>
+    <td class="styleTD">{{ count3 }}</td>
+    <td>{{ price3 }}</td>
+    <td>{{ sum3 }}</td>
+    <td> <button (click)="increase3()">Добавить</button>
+  <button (click)="del3()">Delete</button> </td>
+  </tr>
+
+  <tr>
+    <td><i>Товар4</i></td>
+    <td class="styleTD">{{ count4 }}</td>
+    <td>{{ price4 }}</td>
+    <td>{{ sum4 }}</td>
+    <td> <button (click)="increase4()">Добавить</button>
+  <button (click)="del4()">Delete</button> </td>
+  </tr> -->
+  </tbody>
+</table>
+
+<br>
+<br>
+<!--<form (submit)="addItem(FormTovar); FormTovar.reset();">-->
+<!--  <input type="text" size="20" [(ngModel)]="NewTovatName" placeholder="Название">-->
+<!--  <button type="submit" [disabled]="FormTovar.form.invalid"> Добавить</button>-->
+<!--</form>-->
+
+
+<!-- {{ count }}
+<button (click)="increase()">Click</button>
+<button (click)="del()">Delete</button>
+{{ price }}
+{{ sum }}
+ -->
