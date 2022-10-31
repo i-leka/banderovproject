@@ -1,0 +1,14 @@
+h1 {
+  text-align: right;
+  width: 50%;
+  margin: 0 auto;
+}
+
+table {
+  width: 50%;
+  margin: 0 auto;
+}
+
+th {
+  text-align: left;
+}
